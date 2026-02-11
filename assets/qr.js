@@ -4,12 +4,12 @@ var closeButton = document.querySelector(".close");
 // Otwieranie modala
 document.querySelectorAll(".action").forEach((element) => {
     element.addEventListener('click', (e) => {
-        e.stopPropagation(); // Zapobiega natychmiastowemu zamknięciu
+        e.stopPropagation();
         error.classList.add("error_open");
     });
 });
 
-// Zamykanie - TYLKO jeśli klikniesz dokładnie w overlay
+// Zamykanie - kliknięcie na overlay
 closeButton.addEventListener('click', () => {
     error.classList.remove("error_open");
 });
