@@ -160,5 +160,48 @@ document.querySelectorAll(".input").forEach((input) => {
 });
 
 
+// otwieranie QR
+const showQrBtn = document.getElementById("showQr");
+const qrOverlay = document.getElementById("qrOverlay");
+const qrClose = document.getElementById("qrClose");
+const qrBar = document.getElementById("qrBar");
+const qrTimer = document.getElementById("qrTimer");
+
+if (showQrBtn) {
+  showQrBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    qrOverlay.classList.add("open");
+    startQrTimer();
+  });
+}
+
+if (qrClose) {
+  qrClose.addEventListener("click", () => {
+    qrOverlay.classList.remove("open");
+  });
+}
+
+function startQrTimer() {
+  let seconds = 150;
+  const total = 150;
+
+  const interval = setInterval(() => {
+    if (seconds <= 0) {
+      clearInterval(interval);
+      return;
+    }
+
+    const min = Math.floor(seconds / 60);
+    const sec = String(seconds % 60).padStart(2,"0");
+
+    qrTimer.textContent = `Kod wygaśnie za: ${min}:${sec}`;
+    qrBar.style.width = (seconds / total) * 100 + "%";
+
+    seconds--;
+  }, 1000);
+}
+
+
+
 
 
