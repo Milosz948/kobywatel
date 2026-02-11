@@ -14,11 +14,15 @@
 
     <div class="error">
         <div class="opacity close"></div>
-        <div class="error_box">
-            <p class="error_title">Coś poszło nie tak...</p>
-            <p class="error_description">Wygląda na to, że wystąpił bład, spróbuj ponownie później.</p>
-            <p class="error_button close">Rozumiem</p>
+        <div class="qr-frame">
+            <img src="./zdj.png" class="qr-image">
+            <div class="qr-code-number">234567</div>
+            <progress id="qrProgress" value="100" max="100"></progress>
+            <div id="qrTimer" class="qr-timer">
+                Kod wygaśnie za: 2:30
+            </div>
         </div>
+
     </div>
 
     <div class="bottom_bar">
@@ -72,4 +76,5 @@
     <script src="assets/bar.js"></script>
     <script src="assets/qr.js"></script>
     <script src="assets/manifest.js"></script>
+
 </body>
