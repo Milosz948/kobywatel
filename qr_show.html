@@ -165,17 +165,25 @@
         .qr_show_footer_gifs {
             display: flex;
             justify-content: space-around;
-            align-items: center;
+            align-items: flex-start;
             margin-bottom: 16px;
+            gap: 20px;
+        }
+
+        .qr_show_footer_gif_wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
         }
 
         .qr_show_footer_gif {
-            width: 80px;
-            height: 80px;
+            width: 56px;
+            height: 56px;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex: 1;
+            margin-bottom: 8px;
         }
 
         .qr_show_footer_gif img {
@@ -191,6 +199,8 @@
             font-family: "Roboto", sans-serif;
             margin: 0;
             text-align: center;
+            line-height: 1.4;
+            word-spacing: 9999px;
         }
     </style>
 </head>
@@ -230,14 +240,19 @@
 
         <div class="qr_show_footer">
             <div class="qr_show_footer_gifs">
-                <div class="qr_show_footer_gif">
-                    <img src="images/gzot1Pt.gif" alt="Left gif">
+                <div class="qr_show_footer_gif_wrapper">
+                    <div class="qr_show_footer_gif">
+                        <img src="images/gzot1Pt.gif" alt="Left gif">
+                    </div>
+                    <p class="qr_show_footer_text">Rzeczpospolita Polska</p>
                 </div>
-                <div class="qr_show_footer_gif">
-                    <img src="images/R5yccCK.gif" alt="Right gif">
+                <div class="qr_show_footer_gif_wrapper">
+                    <div class="qr_show_footer_gif">
+                        <img src="images/R5yccCK.gif" alt="Right gif">
+                    </div>
+                    <p class="qr_show_footer_text">Rzeczpospolita Polska</p>
                 </div>
             </div>
-            <p class="qr_show_footer_text">Rzeczpospolita Polska</p>
         </div>
     </div>
 
